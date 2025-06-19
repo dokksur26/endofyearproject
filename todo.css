@@ -1,0 +1,217 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body Background */
+body {
+  background-color: #f0f4f5;
+  background-image: url("C:/Users/dokka/Downloads/homebackground.jpg"); /* Update path if needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 140px; /* Creates space under header */
+}
+
+/* Header Styles */
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: lightgreen;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: darkgreen;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: darkgreen;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: lightgreen;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  list-style: none;
+  z-index: 999;
+}
+
+#navbar li:hover .dropdown {
+  display: block;
+}
+
+.dropdown li {
+  padding: 10px 20px;
+  width: 150px;
+}
+
+.dropdown li a {
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.dropdown li a:hover {
+  background-color: darkseagreen;
+  color: white;
+}
+
+/* Login Button */
+.login-btn {
+  padding: 8px 16px;
+  background-color: white;
+  color: black;
+  border: 1px solid darkgreen;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background-color: darkgreen;
+  color: white;
+}
+
+/* To-Do Container */
+.todo-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin-top: 40px;
+}
+
+.todo-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.input-section button {
+  padding: 10px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.input-section button:hover {
+  background-color: #3b9441;
+}
+
+.task-list {
+  list-style: none;
+}
+
+.task-list li {
+  background: #f9f9f9;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-text {
+  flex: 1;
+  color: #333;
+}
+
+.icons i {
+  margin-left: 12px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.icons i.fa-check {
+  color: #4CAF50;
+}
+
+.icons i.fa-trash {
+  color: #e74c3c;
+}
+
+.icons i:hover {
+  opacity: 0.7;
+}
+body {
+  min-height: 100vh;
+  background-image: url("C:/Users/dokka/Downloads/homebackground.jpg"); /* Update path if needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-top: 140px; /* to make room for the fixed header */
+}
+
