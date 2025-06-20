@@ -1,41 +1,18 @@
-*{
+/* === RESET === */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-
+/* === BODY === */
 body {
-  width: 100%;
+  background-color: #f4f7f8;
+  padding-top: 120px;
 }
 
-/* Typography */
-h1 {
-  font-size: 50px;
-  line-height: 64px;
-  color: white;
-}
-
-h2 {
-  font-size: 46px;
-  line-height: 54px;
-  color: white;
-}
-
-h4 {
-  font-size: 20px;
-  color: white;
-}
-
-p {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 15px 0 20px 0;
-  color: white;
-}
-
-/* Header */
+/* === HEADER === */
 #header {
   display: flex;
   align-items: center;
@@ -43,8 +20,11 @@ p {
   padding: 20px 80px;
   background: lightgreen;
   box-shadow: 0 5px 15px rgba(0,0,0,0.06);
-  z-index: 999;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .header-right {
@@ -56,13 +36,12 @@ p {
 #navbar {
   display: flex;
   align-items: center;
-  position: relative;
+  list-style: none;
 }
 
 #navbar li {
-  list-style: none;
-  padding: 0 20px;
   position: relative;
+  padding: 0 20px;
 }
 
 #navbar li a {
@@ -89,7 +68,7 @@ p {
   left: 20px;
 }
 
-/* Dropdown */
+/* === DROPDOWN === */
 .dropdown {
   display: none;
   position: absolute;
@@ -97,9 +76,9 @@ p {
   left: 0;
   background-color: lightgreen;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 998;
-  padding: 10px 0;
+  z-index: 999;
   list-style: none;
+  padding: 10px 0;
 }
 
 #navbar li:hover .dropdown {
@@ -115,9 +94,8 @@ p {
   color: black;
   font-size: 14px;
   font-weight: 500;
-  display: block;
   text-decoration: none;
-  transition: 0.3s;
+  display: block;
 }
 
 .dropdown li a:hover {
@@ -125,7 +103,7 @@ p {
   color: white;
 }
 
-/* Login Button */
+/* === LOGIN BUTTON === */
 .login-btn {
   padding: 8px 16px;
   background-color: white;
@@ -142,16 +120,51 @@ p {
   color: white;
 }
 
-/* Hero Section */
-#hero {
-  background-image: url('dokka/project/homebackground.jpg'); /* Make sure path is correct */
-  height: 90vh;
-  width: 100%;
-  background-size: cover;
-  background-position: top 25% right 0;
-  padding: 0 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+/* === COURSES PAGE === */
+.courses-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.courses-container h1 {
+  margin-bottom: 30px;
+  font-size: 36px;
+  color: #333;
+}
+
+/* === GRID: 2 Columns === */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  justify-items: center;
+}
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === COURSE CARD === */
+.course-card {
+  background-color: white;
+  width: 80%;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  transition: transform 0.2s ease, background-color 0.2s;
+}
+
+.course-card:hover {
+  background-color: #e0f7e9;
+  transform: translateY(-4px);
+  color: darkgreen;
 }

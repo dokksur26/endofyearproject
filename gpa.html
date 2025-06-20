@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GPA Calculator</title>
+  <link rel="stylesheet" href="gpa.css" />
+</head>
+<body>
+
+  <!-- Header Section -->
+  <section id="header">
+    <a href="#"><img src="" class="logo" alt="Logo" /></a>
+    <div class="header-right">
+      <ul id="navbar">
+        <li><a href="home.html">Home</a></li>
+        <li>
+          <a href="#">Courses</a>
+          <ul class="dropdown">
+            <li><a href="courses-sl.html">SL</a></li>
+            <li><a href="courses-hl.html">HL</a></li>
+          </ul>
+        </li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li>
+          <a class="active" href="#">Tools</a>
+          <ul class="dropdown">
+            <li><a href="todo.html">To-Do</a></li>
+            <li><a class="active" href="gpa.html">GPA Calculator</a></li>
+          </ul>
+        </li>
+      </ul>
+      <a href="login.html" class="login-btn">Login</a>
+    </div>
+  </section>
+
+  <!-- GPA Calculator -->
+  <div class="gpa-container">
+    <h1>GPA Calculator</h1>
+    <form>
+      <div class="course-input">
+        <input type="text" placeholder="Course Name" required />
+        <input type="number" placeholder="Grade (0–100)" required />
+        <input type="number" placeholder="Credits" required />
+      </div>
+
+      <div class="course-input">
+        <input type="text" placeholder="Course Name" />
+        <input type="number" placeholder="Grade (0–100)" />
+        <input type="number" placeholder="Credits" />
+      </div>
+
+      <div class="course-input">
+        <input type="text" placeholder="Course Name" />
+        <input type="number" placeholder="Grade (0–100)" />
+        <input type="number" placeholder="Credits" />
+      </div>
+
+      <button type="submit" disabled>Calculate GPA (JS Required)</button>
+    </form>
+  </div>
+
+</body>
+</html>
