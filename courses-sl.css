@@ -1,0 +1,170 @@
+/* === RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* === BODY === */
+body {
+  background-color: #f4f7f8;
+  padding-top: 120px;
+}
+
+/* === HEADER === */
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: lightgreen;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+#navbar li {
+  position: relative;
+  padding: 0 20px;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: darkgreen;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: darkgreen;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+/* === DROPDOWN === */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: lightgreen;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  list-style: none;
+  padding: 10px 0;
+}
+
+#navbar li:hover .dropdown {
+  display: block;
+}
+
+.dropdown li {
+  padding: 10px 20px;
+  width: 150px;
+}
+
+.dropdown li a {
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown li a:hover {
+  background-color: darkseagreen;
+  color: white;
+}
+
+/* === LOGIN BUTTON === */
+.login-btn {
+  padding: 8px 16px;
+  background-color: white;
+  color: black;
+  border: 1px solid darkgreen;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background-color: darkgreen;
+  color: white;
+}
+
+/* === COURSES PAGE === */
+.courses-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.courses-container h1 {
+  margin-bottom: 30px;
+  font-size: 36px;
+  color: #333;
+}
+
+/* === GRID: 2 Columns === */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  justify-items: center;
+}
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === COURSE CARD === */
+.course-card {
+  background-color: white;
+  width: 80%;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  transition: transform 0.2s ease, background-color 0.2s;
+}
+
+.course-card:hover {
+  background-color: #e0f7e9;
+  transform: translateY(-4px);
+  color: darkgreen;
+}
